@@ -13,7 +13,7 @@ export default {
   }, methods: {
     auth(network) {
       const hello = this.hello;
-      hello(network).login({response_type: 'code'}).then(() => {
+      hello(network).login().then(() => {
           
         const authRes = hello(network).getAuthResponse();
         console.log('auth rest', authRes)
